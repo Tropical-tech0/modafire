@@ -1,0 +1,322 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.package.selected {
+    border: 2px solid #d32f2f;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+    transform: scale(1.05);
+}
+
+.your {
+    font-style: bold;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 130px;
+    font-weight: 300;
+}
+
+.your-container {
+    margin-left: -130px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url(../fonts/agency-fb/AGENCYB.TTF);
+    font-weight: bold;
+}
+
+.element {
+    font-family: 'Agency FB', sans-serif;
+}
+
+.paragraph {
+    margin-top: 10px;
+    font-size: medium;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/background/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.packages {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+    border: 2px solid #d32f2f;
+}
+
+.package h3 {
+    font-size: 18px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 15px;
+}
+
+.package .description {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.package .description hr {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.package img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.select-btn {
+    margin-top: 0px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    font-family: 'Agency FB', sans-serif;
+    width: 170px;
+}
+
+.package.selected .select-btn {
+    background-color: #B22222;
+}
+
+.select-btn:hover {
+    background-color: #555;
+}
+
+/* Estilos dos botões de navegação */
+.buttons-container button {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Agency FB', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 17%;
+}
+
+.back-btn {
+    background-color: #ccc;
+    color: black;
+}
+
+.back-btn:hover {
+    background-color: #888;
+}
+
+.next-btn {
+    background-color: #413838;
+    color: white;
+}
+
+.next-btn:hover {
+    background-color: #555;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Contêiner das notificações */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 300px;
+    padding: 0 10px;
+}
+
+.notification {
+    background-color: #ffffff;
+    color: #333333;
+    border-left: 5px solid #f44336;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification.success {
+    border-left-color: #4CAF50;
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.notification.error {
+    border-left-color: #f44336;
+    background-color: #fbe9e7;
+    color: #d32f2f;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+
+.notification .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.notification .close-btn:hover {
+    opacity: 0.7;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .your {
+        font-size: 24px;
+       
+    }
+
+    .packages {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .package {
+        width: 100%;
+    }
+
+    .select-btn,
+    .buttons-container button {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .notification-container {
+        max-width: 90%;
+    }
+}
+
+/* Responsividade para telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .your {
+        font-size: 28px;
+        padding-left: 100px;
+    }
+
+    .packages {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .package {
+        width: 45%;
+    }
+
+    .buttons-container button {
+        width: 45%;
+    }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 1025px) {
+    .your {
+        padding-left: 130px;
+        font-size: 30px;
+    }
+
+    .packages {
+        gap: 20px;
+    }
+
+    .package {
+        width: 290px;
+    }
+
+    .buttons-container button {
+        width: 17%;
+    }
+}

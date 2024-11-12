@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Fire</title>
+    <link rel="stylesheet" href="styles/size.css">
+    <link rel="icon" href="images/icons/fire-icon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="notification-container" class="notification-container"></div>
+    <div class="container">
+        <h1 class="your">Select your <strong>size</strong></h1>
+        <form id="sizeForm">
+            <div class="size-selection">
+                <label for="clothingTops">Clothing tops:</label>
+                <select id="clothingTops" name="clothingTops" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="S">S</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="size-selection">
+                <label for="jacketCoat">Jacket and Coat:</label>
+                <select id="jacketCoat" name="jacketCoat" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="size-selection">
+                <label for="blazer">Blazer:</label>
+                <select id="blazer" name="blazer" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="30">30</option>
+                    <option value="32">32</option>
+                    <option value="34">34</option>
+                    <option value="36">36</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="42">42</option>
+                    <option value="44">44</option>
+                    <option value="46">46</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+            <div class="size-selection">
+                <label for="pantsShorts">Pants and shorts:</label>
+                <select id="pantsShorts" name="pantsShorts" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="30">30</option>
+                    <option value="32">32</option>
+                    <option value="34">34</option>
+                    <option value="36">36</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="42">42</option>
+                    <option value="44">44</option>
+                    <option value="46">46</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+            <div class="buttons-container">
+                <button class="back-btn" type="button" onclick="goBack()">◀ㅤBACK</button>
+                <button class="next-btn" type="button" onclick="nextStep()">NEXTㅤ▶</button>
+            </div>
+        </form>
+    </div>
+    <script src="script/size.js"></script>
+</body>
+</html>

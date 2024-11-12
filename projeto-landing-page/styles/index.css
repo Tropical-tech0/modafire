@@ -1,0 +1,1084 @@
+* {
+    margin-top: 60px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agency FB', sans-serif;
+}
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url(../fonts/agency-fb/AGENCYB.TTF);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff; /* cor de fundo opcional */
+    position: fixed; /* Torna o cabeçalho fixo no topo */
+    top: 0; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+.logo {
+    cursor: pointer; /* Deixa o cursor como ponteiro para indicar que é clicável */
+    width: 18vw; /* ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+header .button-black {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000; /* fundo preto */
+    color: #fff; /* texto branco */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button-black:hover {
+    background-color: #333; /* cor mais clara ao passar o mouse */
+}
+
+.container-1 {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center; /* centraliza o conteúdo horizontalmente */
+    align-items: center;     /* centraliza o conteúdo verticalmente */
+    padding: 20px;
+    gap: 20px;               /* espaçamento entre as divisões esquerda e direita */
+}
+
+.left-section {
+    max-width: 60%;
+}
+
+.left-section h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.text-with-icon, .text-with-icon-button {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px; /* espaço para o ícone atrás do texto */
+}
+
+.text-with-icon img, .text-with-icon-button img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px; /* ajuste o tamanho do ícone */
+    height: 25px;
+}
+
+.text-with-icon p {
+    font-size: 1em;
+    margin: 0 0 20px 0;
+}
+
+.text-with-icon-button p {
+    font-size: 1em;
+    margin: 0 0 40px 0;
+}
+
+.works-text .text-with-icon p {
+    margin-left:0px;
+}
+
+.container-1 .button-black {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000; /* fundo preto */
+    color: #fff; /* texto branco */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.container-1 .button-black:hover {
+    background-color: #333; /* cor mais clara ao passar o mouse */
+}
+
+.right-section {
+    width: 50%; /* ajusta a largura conforme necessário */
+    height: auto; /* mantém a altura automática para o GIF ocupar todo o contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif {
+    width: 200%; /* ocupa toda a largura da .right-section */
+    height: auto; /* mantém a proporção do GIF */
+    max-height: 800px; /* limite opcional para altura máxima */
+    object-fit: contain; /* ajusta o GIF ao contêiner sem cortes */
+    margin-left: 50%; /* Ajusta a margem para mover o GIF um pouco para a direita */
+}
+
+/* Responsividade: Ajustando para telas pequenas */
+@media (max-width: 1024px) {
+    .container-1 {
+        flex-direction: column; /* Coloca as seções em uma coluna */
+        gap: 40px; /* Aumenta o espaço entre as seções */
+    }
+
+    .left-section {
+        max-width: 100%; /* Deixa a largura da seção esquerda ocupar toda a largura disponível */
+    }
+
+    .left-section h1 {
+        font-size: 3em; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .text-with-icon, .text-with-icon-button {
+        padding-left: 30px; /* Ajusta o espaço do ícone */
+    }
+
+    .right-section {
+        width: 100%; /* Ajusta a largura da seção direita para 100% */
+    }
+
+    .gif {
+        width: 100%; /* Reduz o tamanho do GIF */
+        max-height: 500px; /* Ajusta a altura máxima do GIF */
+        margin-left: 0;
+    }
+
+    header .button-black {
+        font-size: 1em; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 15px; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Responsividade para telas ainda menores, como celulares */
+@media (max-width: 768px) {
+    .container-1 {
+        padding: 10px; /* Reduz o espaçamento nas laterais */
+    }
+
+    .left-section h1 {
+        font-size: 2.5em; /* Ajusta o tamanho do título */
+    }
+
+    .text-with-icon, .text-with-icon-button {
+        padding-left: 25px; /* Ajusta o espaço do ícone */
+    }
+
+    .gif {
+        max-height: 400px; /* Ajusta a altura do GIF */
+        margin-left: 0; 
+    }
+
+    header .button-black {
+        font-size: 1em; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 15px; /* Ajusta o tamanho do botão */
+    }
+}
+
+
+/* Centraliza e define uma largura máxima para os containers */
+.container-2 {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+/* Estilo para a primeira parte "How it works" */
+.works {
+    text-align: left; /* Centraliza o conteúdo de texto */
+    margin-bottom: 50px; /* Espaçamento abaixo dessa seção */
+}
+
+.works-text .text-with-icon {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.works-text .text-with-icon img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.works-text p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 35px; /* Ajuste o espaço entre o ícone e o texto */
+    color: #000;
+}
+
+.works-text h1 {
+    font-size: 2.5em;
+    margin-top: -10px;
+    color: #000; /* Cor do título principal */
+}
+
+/* Flexbox para os "cards" */
+.container-works {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre os cards */
+    margin-top: 40px;
+    flex-wrap: wrap; /* Garante que os itens não saiam da tela em dispositivos menores */
+}
+
+/* Estilo para cada card */
+/* Estilo para os cards (photos-with-paragraph) */
+.photos-with-paragraph {
+    width: 30%; /* Cada card ocupa 30% da largura */
+    background-color: #fff; /* Fundo branco para o card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar o efeito de card */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+/* Efeito de hover nos cards */
+.photos-with-paragraph:hover {
+    transform: translateY(-10px); /* Faz o card subir um pouco quando passa o mouse */
+}
+
+/* Ajuste das imagens dentro dos cards */
+.photos-with-paragraph img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Assegura que a imagem cubra o espaço sem distorção */
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+/* Títulos dos cards */
+.photos-with-paragraph h3 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    color: #333;
+    text-align: left;
+}
+
+/* Parágrafos abaixo dos títulos */
+.photos-with-paragraph p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Responsividade: em telas pequenas, os cards empilham */
+@media (max-width: 768px) {
+    .container-works {
+        flex-direction: column; /* Alinha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .photos-with-paragraph {
+        width: 90%; /* Aumenta a largura dos cards nas telas pequenas */
+        margin-bottom: 20px; /* Espaçamento entre os cards */
+    }
+}
+
+.highlight-section {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.highlight-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+.highlight {
+    background-color: #B22222;
+}
+
+/* Estilo para a seção highlight */
+.highlight-section {
+    background-color: #B22222; /* Fundo vermelho */
+    color: #fff; /* Texto branco */
+    padding: 60px 20px; /* Espaçamento geral */
+}
+
+.highlight-section .content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: space-between; /* Espaçamento entre o texto e a imagem */
+    gap: 40px; /* Espaçamento entre as colunas */
+}
+
+.text-side {
+    max-width: 50%;
+}
+
+.text-with-icon-white {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-with-icon-white img {
+    width: 25px; /* Tamanho do ícone */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.text-with-icon-white p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.experts {
+    margin-top: 40px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.over {
+    margin-top: 100px;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.all-sizes {
+    font-weight: bold;
+    color: #fff; /* Amarelo para destacar */
+}
+
+.image-side img {
+    max-width: 100%; /* Faz a imagem ocupar a largura máxima */
+    height: auto;
+    max-height: 500px; /* Limite de altura para a imagem */
+    object-fit: contain; /* Garante que a imagem seja bem ajustada */
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    gap: 60px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza os cards */
+    padding: 0px;
+    background-color: #B22222; /* Cor de fundo para destacar o layout */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Layout em coluna para o conteúdo do card */
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 30px; /* Aumentando o padding para aumentar o tamanho do card */
+    border-radius: 16px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Aumentando a largura do card */
+    background-color: white; /* Fundo branco para o card */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center; /* Alinha a imagem e as informações na mesma linha */
+    text-align: left; /* Garante que o nome e a profissão fiquem alinhados à esquerda */
+    margin-left: -80px;
+    gap: 10px; /* Espaço entre a imagem e as informações */
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 20px; /* Aumentando o tamanho da fonte do nome */
+}
+
+.profile-info .profession {
+    margin: 0;
+    font-size: 16px; /* Aumentando o tamanho da fonte da profissão */
+    color: #666;
+}
+
+.profile-photo {
+    width: 80px; /* Aumentando o tamanho da foto */
+    height: 80px; /* Aumentando o tamanho da foto */
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #000;
+}
+
+.testimonial {
+    font-style: italic;
+    color: #333;
+    text-align: left; /* Alinhamento à esquerda do texto */
+    margin-top: 35px;
+    font-size: 16px; /* Aumentando o tamanho da fonte do depoimento */
+}
+
+
+
+
+
+
+
+
+/* Efeito de hover nos cards */
+.card:hover {
+    transform: translateY(-10px); /* Levanta o card um pouco ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .highlight-section {
+        padding: 40px 15px; /* Reduz o espaçamento nas laterais */
+    }
+
+    .content {
+        flex-direction: column; /* Coloca o conteúdo em coluna em telas menores */
+        align-items: center; /* Centraliza os elementos */
+    }
+
+    .text-side {
+        max-width: 100%; /* Deixa a seção de texto ocupar toda a largura */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .image-side {
+        max-width: 100%; /* A imagem ocupa toda a largura */
+        margin-top: 20px; /* Espaço entre a imagem e o texto */
+    }
+
+    .cards {
+        flex-direction: column; /* Empilha os cards em telas pequenas */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .card {
+        width: 80%; /* Faz os cards ocuparem mais espaço em telas pequenas */
+        margin-bottom: 20px; /* Espaçamento entre os cards */
+    }
+}
+
+.experience-section {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+.experience {
+    background-color: white;
+}
+
+.div-experience {
+    margin-bottom: 40px; /* Espaçamento entre o cabeçalho e os ícones */
+}
+
+.experience-header {
+    display: flex;
+    justify-content: left; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    gap: 15px; /* Espaçamento entre o ícone e o texto */
+}
+
+.experience-icon {
+    width: 20px; /* Ajusta o tamanho do ícone */
+    height: auto;
+}
+
+.experience-header p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000; /* Cor do texto */
+}
+
+.experience-header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px; /* Espaço acima do título */
+}
+
+.experience-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre os ícones */
+    margin-top: 40px;
+    flex-wrap: wrap; /* Garante que os itens não saiam da tela em dispositivos menores */
+    justify-content: left;
+}
+
+.experience-feature {
+    background-color: #fff; /* Fundo branco para as features */
+    border-radius: 10px;
+    text-align: left;
+    width: 30%; /* Cada feature ocupa 30% da largura */
+    min-width: 200px; /* Garante que as features não fiquem muito pequenas */
+}
+
+.feature-icon {
+    width: 50px; /* Ajusta o tamanho dos ícones */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do ícone */
+}
+
+.experience-feature h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Espaço entre o subtítulo e o parágrafo */
+    text-align: left;
+}
+
+.experience-feature p {
+    font-size: 1.2em;
+    color: #555;
+    text-align: left;
+}
+
+/* Responsividade: em telas pequenas, as features empilham */
+@media (max-width: 768px) {
+    .experience-features {
+        flex-direction: column; /* Alinha as features verticalmente */
+        align-items: center; /* Centraliza as features */
+    }
+
+    .experience-feature {
+        width: 80%; /* Aumenta a largura das features nas telas menores */
+        margin-bottom: 30px; /* Espaçamento entre as features */
+    }
+}
+
+.budget {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+    
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.budget {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+.budget-color {
+    background-color: #B22222;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.budget {
+    background-color: #B22222;
+    margin-top: 0px;
+}
+
+.section-budget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
+    flex-wrap: wrap; /* Garante que a estrutura se ajuste em telas menores */
+}
+
+.text-and-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.left-image {
+    width: 40%; /* Ajuste o tamanho da imagem */
+    height: auto;
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+    border-radius: 50px;
+}
+
+.text-content {
+    width: 55%; /* Ajusta o tamanho da área de texto */
+}
+
+.text-with-icon-white {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço abaixo do texto com ícone */
+}
+
+.text-with-icon-white img {
+    width: 35px; /* Tamanho do ícone */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.text-with-icon-white p {
+    font-size: 1.5em; /* Tamanho do texto "In your budget" */
+    font-weight: bold;
+    color: #fff; /* Texto branco */
+}
+
+h1 {
+    font-size: 2.7em; /* Tamanho maior do título */
+    font-weight: bold;
+    color: #000; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.text-content p {
+    font-size: 1.2em; /* Tamanho do parágrafo */
+    color: #fff; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+}
+
+.text-content h1 {
+    font-size: 3em; /* Tamanho maior do título */
+    font-weight: bold;
+    color: #fff; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .section-budget {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        align-items: center;
+        gap: 20px;
+    }
+    .text-and-image {
+        justify-content: center; /* Centraliza o conteúdo */
+        text-align: center; /* Garante que o texto também fique centralizado */
+    }
+
+    .left-image {
+        width: 80%; /* Ajuste o tamanho da imagem para telas pequenas */
+        margin: 0 auto; /* Centraliza a imagem dentro de seu contêiner */
+    }
+
+    .text-content {
+        width: 80%; /* Ajusta a largura do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .text-content p {
+        font-size: 1.1em; /* Reduz o tamanho do parágrafo */
+    }
+}
+
+.footer-color {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-sos {
+    margin-top: 100px;
+    background-color: #000;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.footer-logo h2 {
+    margin: 0;
+}
+
+.footer-logo img:first-of-type {
+    margin-right: 0;
+}
+
+.footer-logo .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-logo .social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.fashion {
+    background-color: #000;
+    color: white;
+}
+
+.fashion h1 {
+    margin-left: 20px;
+    color: white;
+}
+
+.accept {
+    color: white;
+    background-color: black;
+}
+
+.accept p {
+    margin-left: 20px;
+}
+
+.payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre para novas linhas em telas menores */
+}
+
+.payment-images {
+    display: flex;
+    gap: 15px; /* Espaçamento entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se reorganizem em telas menores */
+}
+
+.payment img {
+    height: 30px;
+    width: auto;
+    margin-left: 19px;
+    margin-top: 20px;
+}
+
+.payment p {
+    margin: 0;
+    text-align: right;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-logo {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo .social-icons {
+        margin-top: 10px;
+    }
+
+    .payment {
+        flex-direction: column; /* Coloca as imagens e o parágrafo em colunas em telas menores */
+        align-items: center;
+        text-align: center;
+    }
+
+    .payment-images {
+        margin-bottom: 10px;
+        justify-content: center; /* Alinha as imagens no centro em telas menores */
+    }
+
+    .payment p {
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-top: 10px; /* Adiciona um espaço entre as imagens e o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .payment img {
+        height: 25px; /* Reduz o tamanho das imagens em telas menores */
+    }
+
+    .footer-logo .social-icons img {
+        width: 25px;
+        height: 25px; /* Reduz o tamanho dos ícones sociais em telas menores */
+    }
+
+    .fashion h1 {
+        margin-left: 50px;
+    }
+
+    .accept p {
+        margin-left: 140px;
+    }
+}
+
+.faq-pading {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.faq-pading {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+.faq-container {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .faq-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .faq-header img {
+    height: 24px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .faq-item {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+
+.container-begins {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+/* Flex container para organizar as divs lado a lado */
+.begins {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre a coluna de texto e a imagem */
+}
+
+/* Contêiner de texto */
+.text-container {
+    flex: 1; /* A contêiner de texto ocupa a maior parte do espaço */
+}
+
+/* Contêiner de imagem */
+.image-container {
+    flex: 1; /* A contêiner de imagem ocupa o restante do espaço */
+    margin-top: -20px;
+}
+
+/* Estilos para o cabeçalho e o texto */
+.experience-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-icon {
+    width: 20px;
+    height: auto;
+}
+
+.experience-header p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+.experience-header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+}
+
+/* Lista de serviços */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin-top: -20px;
+}
+
+.service-list li {
+    margin: 10px 0;
+}
+
+/* Estilo da imagem */
+.service-image {
+    margin-top: 20px;
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem preencha bem o contêiner */
+}
+
+
+.container-begins {
+    max-width: 1200px; /* ou outro valor conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* espaçamento à esquerda e à direita */
+}
+
+/* Centraliza os containers com espaçamento nas laterais */
+.container-begins {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 75px;
+}
+
+.text-with-icon-white-budget {
+    display: flex;
+    align-items: center;
+}
+
+.text-with-icon-white-budget p {
+    margin-top: 24px; /* Ajuste este valor para mover o texto para baixo */
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.text-with-icon-white-budget img.icon {
+    margin-right: 8px; /* Ajuste o espaço entre o ícone e o texto */
+    width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+}
+
+
+/* Container principal para a seção de serviços */
+.services {
+    display: flex;
+    justify-content: space-between; /* Lista à esquerda e imagem à direita */
+    align-items: center;
+    padding: 20px;
+    margin-top: -30px;
+}
+
+/* Estilo da lista de serviços */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    margin-left: -25px;
+}
+
+.service-list li {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #333; /* Texto preto */
+    padding: 10px 15px;
+    margin: 15px 0; /* Espaço entre os itens */
+    border-radius: 50px; /* Bordas arredondadas */
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.2s ease; /* Animação para hover */
+    text-align: left;
+}
+
+/* Estilo da imagem */
+.service-image {
+    max-width: 100%;
+    height: auto;
+    width: 500px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-left: 20px; /* Espaço entre a lista e a imagem */
+    border-radius: 50px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    /* Organiza em coluna em vez de linha */
+    .begins {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajuste de tamanho da imagem para telas pequenas */
+    .service-image {
+        margin-left: 40px;
+        width: 80%; /* Ajusta o tamanho da imagem para telas pequenas */
+    }
+
+    /* Ajusta o tamanho da fonte dos itens da lista em telas pequenas */
+    .service-list li {
+        font-size: 18px;
+        padding: 8px 12px; /* Reduz o padding */
+    }
+
+    .service-list {
+        margin-left: 50px;
+    }
+
+    /* Ajusta o título */
+    .experience-header h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título para telas pequenas */
+    }
+}
+
+.text-container .button-black {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000; /* fundo preto */
+    color: #fff; /* texto branco */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}

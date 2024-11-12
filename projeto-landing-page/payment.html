@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Fire</title>
+    <link rel="icon" href="images/icons/fire-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/payment.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</head>
+<body>
+    <div id="notification-container" class="notification-container"></div>
+    <div class="container">
+        <div class="brand-header">
+            <h2>Low Profile Brands</h2>
+        </div>
+        <div class="item-list">
+            <ul>
+                <li><input type="checkbox" checked disabled id="tShirt"> T-Shirt</li>
+                <li><input type="checkbox" checked disabled id="buttonBlouse"> Button Blouse</li>
+                <li>
+                    <input type="radio" name="outerwear" id="jacket"><div id="outerwearLabel">Jacket</div>
+                    <span>Or</span>
+                    <input type="radio" name="outerwear" id="coat"> Coat
+                </li>
+                <li>
+                    <input type="radio" name="bottom" id="pants"> Pants
+                    <span>Or</span>
+                    <input type="radio" name="bottom" id="shorts"> Shorts
+                </li>
+            </ul>
+        </div>
+        <div class="package-info">
+            <span class="label">Selected Package:</span>
+            <span class="selected-package-name"></span>
+        </div>
+        
+        <div class="total">
+            <span>Total:</span>
+            <span class="price" id="price">€0.00</span>
+        </div>
+        <div class="button-container">
+            <button class="back-btn" type="button" onclick="goBack()">◀ㅤBACK</button>
+            <button id="sendButton" class="payment-btn" >PAYMENTㅤ▶</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script/email.js"></script>
+</body>
+</html>

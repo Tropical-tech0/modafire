@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Fire</title>
+    <link rel="stylesheet" href="styles/package.css">
+    <link rel="icon" href="images/icons/fire-icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="notification-container" class="notification-container"></div>
+    <div class="container">
+        <div class="your-container">
+            <h1 class="your">Pick <strong class="highlight">your</strong> package</h1>
+        </div>
+    <div class="packages">
+        <div class="package" onclick="selectPackage(this)" data-package="low-profile">
+            <h3>Low Profile Brands</h3>
+            <img src="images/people/man-13.png" alt="Imagem Low Profile">
+            <div class="description">
+                <p class="paragraph">Affordable Price</p>
+                <hr>
+                <p class="paragraph">Versatile Style</p>
+                <hr>
+                <p class="paragraph">Reliable Quality</p>
+                <hr>
+            </div>
+            <button class="select-btn"><strong>SELECT</strong></button>
+        </div>
+        <div class="package" onclick="selectPackage(this)" data-package="mid-range">
+            <h3>Mid-Range Brands</h3>
+            <img src="images/people/man-14.png" alt="Imagem Mid Range">
+            <div class="description">
+                <p class="paragraph">Better Quality Materials</p>
+                <hr>
+                <p class="paragraph">Trendy Designs</p>
+                <hr>
+                <p class="paragraph">Improved Fit and Comfort</p>
+                <hr>
+            </div>
+            <button class="select-btn"><strong>SELECT</strong></button>
+        </div>
+        <div class="package" onclick="selectPackage(this)" data-package="top-brands">
+            <h3>Top Brands</h3>
+            <img src="images/people/man-15.png" alt="Imagem Top Brands">
+            <div class="description">
+                <p class="paragraph">Superior Quality and Craftsmanship</p>
+                <hr>
+                <p class="paragraph">Exclusive Designs and Trends</p>
+                <hr>
+                <p class="paragraph">Status and Prestige</p>
+                <hr>
+            </div>
+            <button class="select-btn"><strong>SELECT</strong></button>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button class="back-btn" type="button" onclick="goBack()">◀ㅤBACK</button>
+        <button class="next-btn" type="button" onclick="nextStep()">NEXTㅤ▶</button>
+    </div>
+</div>
+
+    <script src="script/package.js"></script>
+</body>
+</html>

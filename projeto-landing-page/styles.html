@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Fire</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/icons/fire-icon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="notification-container" class="notification-container"></div>
+    <div class="container">
+        <h1>Which <strong>style</strong> resonates with you the most?</h1>
+        <div class="styles">
+            <div class="style" onclick="selectStyle(this)" data-style="classic">
+                <img src="images/people/man-8.png" alt="Classic">
+                <p>Classic</p>
+            </div>
+            <div class="style" onclick="selectStyle(this)" data-style="casual">
+                <img src="images/people/man-9.png" alt="Casual">
+                <p>Casual</p>
+            </div>
+            <div class="style" onclick="selectStyle(this)" data-style="streetwear">
+                <img src="images/people/man-10.png" alt="Streetwear">
+                <p>Streetwear</p>
+            </div>
+            <div class="style" onclick="selectStyle(this)" data-style="formal">
+                <img src="images/people/man-11.png" alt="Formal">
+                <p>Formal</p>
+            </div>
+            <div class="style" onclick="selectStyle(this)" data-style="modern">
+                <img src="images/people/man-12.png" alt="Modern">
+                <p>Modern</p>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="back-btn" onclick="goBack()">◀ㅤBACK</button>
+            <button class="next-btn" onclick="nextStep()">NEXTㅤ▶</button>
+        </div>
+    </div>
+    <script src="script/styles.js"></script>
+</body>
+</html>
