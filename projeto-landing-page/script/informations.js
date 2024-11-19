@@ -77,7 +77,7 @@ function validateEmail(email) {
 
 // Função de validação do número de telefone
 function validatePhoneNumber(phone) {
-    const re = /^[0-9]{10,15}$/; // Valida números de telefone com 10 a 15 dígitos
+    const re = /^[0-9]+$/;
     return re.test(phone);
 }
 
@@ -89,7 +89,7 @@ function validateIDNumber(idNumber) {
 
 // Função de validação do código postal
 function validatePostalCode(postalCode) {
-    const re = /^[0-9]{4,10}$/; // Ajuste conforme o formato esperado do código postal
+    const re = /^[0-9\-]+$/;
     return re.test(postalCode);
 }
 
